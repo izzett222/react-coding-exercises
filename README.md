@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# description
+[9 react exercises](https://coderfiles.dev/blog/reactjs-coding-exercises/) solution
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
