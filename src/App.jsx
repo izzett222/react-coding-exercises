@@ -1,6 +1,6 @@
 import Square from "./components/Square";
-import Alert from "./components/Alert"
-import Alerts from "./components/Alerts"
+import Alert from "./components/Alert";
+import Alerts from "./components/Alerts";
 import Counter from "./components/Counter";
 import List from "./components/List";
 import FancyList from "./components/FancyList";
@@ -10,7 +10,7 @@ import Users from "./components/Users";
 import { useState } from "react";
 
 function App() {
-  const [exercise, setExercise] = useState(6);
+  const [exercise, setExercise] = useState(0);
   let item = null;
   switch (exercise) {
     case 0:
@@ -20,25 +20,25 @@ function App() {
       item = <Alert />;
       break;
     case 2:
-      item = <Alerts />
+      item = <Alerts />;
       break;
     case 3:
-      item = <Counter />
+      item = <Counter />;
       break;
     case 4:
-      item = <List />
+      item = <List />;
       break;
     case 5:
-      item = <FancyList />
+      item = <FancyList />;
       break;
     case 6:
-      item = <Form />
+      item = <Form />;
       break;
     case 7:
-      item = <Jokes />
+      item = <Jokes />;
       break;
     case 8:
-      item = <Users />
+      item = <Users />;
       break;
 
     default:
@@ -48,7 +48,15 @@ function App() {
   return (
     <div className="min-h-[100vh] flex flex-col gap-3">
       <div className="flex justify-center items-center w-full gap-5 pt-4">
-        {[0,1,2,3,4,5,6,7,8].map(el => <button className="hover:underline" onClick={() => setExercise(el)}>exercise {el + 1}</button>)}
+        {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((element) => (
+          <button
+            className="hover:underline"
+            key={element}
+            onClick={() => setExercise(element)}
+          >
+            exercise {element + 1}
+          </button>
+        ))}
       </div>
       <div className="flex justify-center items-center flex-1 w-full">
         {item}

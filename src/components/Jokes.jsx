@@ -16,8 +16,8 @@ export default function Jokes() {
 
   return (
     <div className="flex gap-4">
-      {jokes.map((el) => (
-        <JokeItem key={el.id} {...el} />
+      {jokes.map((joke) => (
+        <JokeItem key={joke.id} {...joke} />
       ))}
     </div>
   );
